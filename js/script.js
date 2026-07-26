@@ -52,14 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
           var pattern = /^[0-9+\s-]{8,}$/;
           return pattern.test(value.trim()) ? '' : 'Veuillez indiquer un numéro de téléphone valide.';
         }
-      },
-      apptTime: {
-        input: document.getElementById('apptTime'),
-        error: document.getElementById('apptTimeError'),
-        validate: function (value) {
-          if (!value) return '';
-          return (value >= '08:30' && value <= '16:30') ? '' : 'Le centre est ouvert de 8h30 à 16h30.';
-        }
       }
     };
 
@@ -99,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var phone = fields.phone.input.value.trim();
       var service = document.getElementById('service').value;
       var apptDate = document.getElementById('apptDate').value;
-      var apptTime = fields.apptTime.input.value;
+      var apptTime = document.getElementById('apptTime').value;
       var message = document.getElementById('message').value.trim();
 
       var lines = [
