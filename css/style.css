@@ -619,6 +619,12 @@ body::after { right: 0; }
   color: var(--text-secondary);
 }
 
+.contact-hours {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 22px;
+}
+
 /* ===== Footer ===== */
 .footer {
   background: var(--secondary);
