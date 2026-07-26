@@ -290,9 +290,19 @@
               <option>Ponction et biopsie guidées</option>
             </select>
           </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="apptDate">Date souhaitée</label>
+              <input type="date" id="apptDate" name="apptDate">
+            </div>
+            <div class="form-group">
+              <label for="apptTime">Heure souhaitée</label>
+              <input type="time" id="apptTime" name="apptTime" step="1800">
+            </div>
+          </div>
           <div class="form-group">
-            <label for="message">Date souhaitée / message</label>
-            <textarea id="message" name="message" rows="3" placeholder="Ex : dès que possible, ou une date précise"></textarea>
+            <label for="message">Message (optionnel)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Précisions supplémentaires"></textarea>
           </div>
           <button type="submit" class="btn btn-whatsapp">
             <svg viewBox="0 0 32 32" width="20" height="20" fill="currentColor" aria-hidden="true">
