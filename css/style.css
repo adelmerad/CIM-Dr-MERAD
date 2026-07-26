@@ -617,6 +617,14 @@ body::after { right: 0; }
   margin-bottom: 24px;
 }
 
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+.form-row .form-group {
+  flex: 1;
+}
+
 .form-group {
   margin-bottom: 18px;
   display: flex;
@@ -814,6 +822,8 @@ body::after { right: 0; }
 
 @media (max-width: 768px) {
   .site-title { display: none; }
+
+  .form-row { flex-direction: column; gap: 0; }
 
   .nav-links {
     position: fixed;

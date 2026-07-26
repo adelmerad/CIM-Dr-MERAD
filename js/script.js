@@ -90,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var name = fields.name.input.value.trim();
       var phone = fields.phone.input.value.trim();
       var service = document.getElementById('service').value;
+      var apptDate = document.getElementById('apptDate').value;
+      var apptTime = document.getElementById('apptTime').value;
       var message = document.getElementById('message').value.trim();
 
       var lines = [
@@ -98,7 +100,15 @@ document.addEventListener('DOMContentLoaded', function () {
         'Téléphone : ' + phone
       ];
       if (service) lines.push('Service souhaité : ' + service);
-      if (message) lines.push('Date souhaitée / message : ' + message);
+      if (apptDate) {
+        var d = apptDate.split('-');
+        var dateLabel = 'Date souhaitée : ' + d[2] + '/' + d[1] + '/' + d[0];
+        if (apptTime) dateLabel += ' à ' + apptTime;
+        lines.push(dateLabel);
+      } else if (apptTime) {
+        lines.push('Heure souhaitée : ' + apptTime);
+      }
+      if (message) lines.push('Message : ' + message);
 
       var whatsappUrl = 'https://wa.me/213552055077?text=' + encodeURIComponent(lines.join('\n'));
       window.open(whatsappUrl, '_blank', 'noopener');
