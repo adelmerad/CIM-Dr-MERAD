@@ -141,7 +141,6 @@ body::after { right: 0; }
 .btn-whatsapp {
   background: var(--whatsapp-green);
   color: #FFFFFF;
-  margin-top: 18px;
 }
 .btn-whatsapp:hover {
   background: var(--whatsapp-green-dark);
@@ -701,6 +700,14 @@ body::after { right: 0; }
   margin-bottom: 20px;
 }
 
+.contact-side-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 18px;
+}
+
 .phone-link-big {
   color: #FFFFFF;
   font-size: 1.15rem;
@@ -778,6 +785,12 @@ body::after { right: 0; }
 }
 .footer-contact a:hover {
   color: #FFFFFF;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .copyright {
