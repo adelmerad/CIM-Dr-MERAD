@@ -10,8 +10,9 @@ Site statique une page (HTML/CSS/JS, sans dépendances ni build) :
 
 - Header/navbar fixe avec menu burger mobile
 - Hero, Services (6 prestations), À propos, Pourquoi nous choisir
-- Localisation avec carte Google Maps intégrée
-- Contact (téléphone + WhatsApp)
+- Localisation avec carte Google Maps intégrée (pin exact) et horaires d'ouverture
+- Formulaire de demande de RDV (date/heure aux créneaux d'ouverture) qui prépare un message WhatsApp
+- Contact : téléphone, email, WhatsApp, Facebook (dont boutons flottants)
 - Animations fade-in au scroll
 
 ## Structure
