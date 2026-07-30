@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://adelmerad.github.io/CIM-Dr-MERAD/sitemap.xml
+Sitemap: https://cimdrmerad.com/sitemap.xml

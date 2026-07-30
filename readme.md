@@ -2,7 +2,7 @@
 
 Site vitrine du Centre de Radiologie et d'Imagerie Médicale – Birtouta (Dr MERAD, médecin radiologue).
 
-**En ligne :** https://adelmerad.github.io/CIM-Dr-MERAD/
+**En ligne :** https://cimdrmerad.com/
 
 ## Contenu
 
