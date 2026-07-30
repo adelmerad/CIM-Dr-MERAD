@@ -1,5 +1,52 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+  /* Bascule FR / AR */
+  var currentLang = localStorage.getItem('cimLang') || 'fr';
+  var langToggle = document.getElementById('langToggle');
+
+  function t(key, frFallback) {
+    return (currentLang === 'ar' && window.AR_TRANSLATIONS && window.AR_TRANSLATIONS[key]) || frFallback;
+  }
+
+  function applyTranslations(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (!el.hasAttribute('data-fr-text')) el.setAttribute('data-fr-text', el.textContent);
+      var frText = el.getAttribute('data-fr-text');
+      el.textContent = (lang === 'ar' && AR_TRANSLATIONS[key]) ? AR_TRANSLATIONS[key] : frText;
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-placeholder');
+      if (!el.hasAttribute('data-fr-placeholder')) el.setAttribute('data-fr-placeholder', el.getAttribute('placeholder') || '');
+      var frText = el.getAttribute('data-fr-placeholder');
+      el.setAttribute('placeholder', (lang === 'ar' && AR_TRANSLATIONS[key]) ? AR_TRANSLATIONS[key] : frText);
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria');
+      if (!el.hasAttribute('data-fr-aria')) el.setAttribute('data-fr-aria', el.getAttribute('aria-label') || '');
+      var frText = el.getAttribute('data-fr-aria');
+      el.setAttribute('aria-label', (lang === 'ar' && AR_TRANSLATIONS[key]) ? AR_TRANSLATIONS[key] : frText);
+    });
+
+    document.documentElement.setAttribute('lang', lang);
+    document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+    if (langToggle) langToggle.textContent = lang === 'ar' ? 'FR' : 'عربي';
+
+    currentLang = lang;
+    localStorage.setItem('cimLang', lang);
+  }
+
+  if (langToggle) {
+    langToggle.addEventListener('click', function () {
+      applyTranslations(currentLang === 'ar' ? 'fr' : 'ar');
+    });
+  }
+
+  applyTranslations(currentLang);
+
   /* Menu burger */
   var burgerBtn = document.getElementById('burgerBtn');
   var navLinks = document.getElementById('navLinks');
@@ -42,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
         input: document.getElementById('name'),
         error: document.getElementById('nameError'),
         validate: function (value) {
-          return value.trim().length > 0 ? '' : 'Veuillez indiquer votre nom.';
+          return value.trim().length > 0 ? '' : t('js.errorName', 'Veuillez indiquer votre nom.');
         }
       },
       phone: {
@@ -50,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
         error: document.getElementById('phoneError'),
         validate: function (value) {
           var pattern = /^[0-9+\s-]{8,}$/;
-          return pattern.test(value.trim()) ? '' : 'Veuillez indiquer un numéro de téléphone valide.';
+          return pattern.test(value.trim()) ? '' : t('js.errorPhone', 'Veuillez indiquer un numéro de téléphone valide.');
         }
       }
     };
@@ -95,20 +142,20 @@ document.addEventListener('DOMContentLoaded', function () {
       var message = document.getElementById('message').value.trim();
 
       var lines = [
-        'Bonjour, je souhaite prendre rendez-vous.',
-        'Nom : ' + name,
-        'Téléphone : ' + phone
+        t('wa.greeting', 'Bonjour, je souhaite prendre rendez-vous.'),
+        t('wa.name', 'Nom : ') + name,
+        t('wa.phone', 'Téléphone : ') + phone
       ];
-      if (service) lines.push('Service souhaité : ' + service);
+      if (service) lines.push(t('wa.service', 'Service souhaité : ') + service);
       if (apptDate) {
         var d = apptDate.split('-');
-        var dateLabel = 'Date souhaitée : ' + d[2] + '/' + d[1] + '/' + d[0];
-        if (apptTime) dateLabel += ' à ' + apptTime;
+        var dateLabel = t('wa.dateLabel', 'Date souhaitée : ') + d[2] + '/' + d[1] + '/' + d[0];
+        if (apptTime) dateLabel += t('wa.at', ' à ') + apptTime;
         lines.push(dateLabel);
       } else if (apptTime) {
-        lines.push('Heure souhaitée : ' + apptTime);
+        lines.push(t('wa.timeLabel', 'Heure souhaitée : ') + apptTime);
       }
-      if (message) lines.push('Message : ' + message);
+      if (message) lines.push(t('wa.message', 'Message : ') + message);
 
       var whatsappUrl = 'https://wa.me/213552055077?text=' + encodeURIComponent(lines.join('\n'));
       window.open(whatsappUrl, '_blank', 'noopener');
