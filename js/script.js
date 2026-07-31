@@ -65,6 +65,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* Accordéon "En savoir plus" des prestations */
+  var moreToggles = document.querySelectorAll('.service-more-toggle');
+
+  function updateMoreToggleLabel(btn) {
+    var isOpen = btn.getAttribute('aria-expanded') === 'true';
+    btn.querySelector('.service-more-toggle-text').textContent = isOpen
+      ? t('js.moreClose', 'Voir moins')
+      : t('js.moreOpen', 'En savoir plus');
+  }
+
+  moreToggles.forEach(function (btn) {
+    updateMoreToggleLabel(btn);
+    btn.addEventListener('click', function () {
+      var isOpen = btn.closest('.service-card').classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+      updateMoreToggleLabel(btn);
+    });
+  });
+
+  if (langToggle) {
+    langToggle.addEventListener('click', function () {
+      moreToggles.forEach(updateMoreToggleLabel);
+    });
+  }
+
   /* Fade-in on scroll */
   var fadeEls = document.querySelectorAll('.fade-in');
   var observer = new IntersectionObserver(function (entries) {
