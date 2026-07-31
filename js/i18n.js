@@ -33,7 +33,6 @@ var AR_TRANSLATIONS = {
   "about.stat1": "تخصصات",
   "about.stat2": "معدات حديثة",
   "about.stat3": "نتائج سريعة",
-  "about.stat4": "30 تقييم على Google",
   "about.badge": "CIM الدكتور مراد – طبيب أشعة",
 
   "why.title": "لماذا تختارنا",
