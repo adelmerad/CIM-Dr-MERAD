@@ -107,6 +107,7 @@ var AR_TRANSLATIONS = {
   "aria.facebookFollow": "تابعونا على فيسبوك",
   "aria.instagramFollow": "تابعونا على إنستغرام",
   "aria.whatsappContact": "تواصلوا معنا عبر واتساب",
+  "aria.backToTop": "العودة إلى الأعلى",
 
   "js.errorName": "يرجى إدخال اسمكم.",
   "js.errorPhone": "يرجى إدخال رقم هاتف صحيح.",
