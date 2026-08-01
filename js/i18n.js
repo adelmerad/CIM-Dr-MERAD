@@ -105,6 +105,7 @@ var AR_TRANSLATIONS = {
 
   "aria.openMenu": "فتح القائمة",
   "aria.facebookFollow": "تابعونا على فيسبوك",
+  "aria.instagramFollow": "تابعونا على إنستغرام",
   "aria.whatsappContact": "تواصلوا معنا عبر واتساب",
 
   "js.errorName": "يرجى إدخال اسمكم.",

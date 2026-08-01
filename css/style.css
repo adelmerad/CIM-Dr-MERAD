@@ -12,6 +12,8 @@
   --whatsapp-green-dark: #1DA851;
   --facebook-blue: #1877F2;
   --facebook-blue-dark: #145DBF;
+  --instagram-pink: #C13584;
+  --instagram-pink-dark: #9c2a6a;
   --navbar-height: 84px;
   --side-bar-width: 6px;
 }
@@ -963,6 +965,27 @@ body::after { right: 0; }
 .facebook-float:hover {
   transform: scale(1.08);
   background: var(--facebook-blue-dark);
+}
+
+/* ===== Instagram floating button ===== */
+.instagram-float {
+  position: fixed;
+  bottom: 172px;
+  right: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--instagram-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  z-index: 800;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.instagram-float:hover {
+  transform: scale(1.08);
+  background: var(--instagram-pink-dark);
 }
 
 /* ===== Responsive ===== */
