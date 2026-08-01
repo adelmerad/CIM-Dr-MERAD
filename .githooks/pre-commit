@@ -1,0 +1,28 @@
+#!/bin/sh
+# Bump the ?v= cache-busting query param in index.html automatically
+# whenever css/style.css, js/script.js or js/i18n.js are part of the commit.
+# This exists because the site has no build step, and browsers/CDN can cache
+# these files aggressively (already caused a live styling bug once).
+
+changed=$(git diff --cached --name-only)
+version=$(date +%s)
+touched=0
+
+bump() {
+  file="$1"
+  escaped=$(printf '%s' "$file" | sed 's/[.[\*^$]/\\&/g')
+  if echo "$changed" | grep -qx "$file"; then
+    sed -i -E "s|${escaped}\?v=[0-9]+|${file}?v=${version}|" index.html
+    touched=1
+  fi
+}
+
+bump "css/style.css"
+bump "js/script.js"
+bump "js/i18n.js"
+
+if [ "$touched" = "1" ]; then
+  git add index.html
+fi
+
+exit 0
