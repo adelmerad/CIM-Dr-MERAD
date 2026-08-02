@@ -1,51 +1,34 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* Bascule FR / AR */
-  var currentLang = localStorage.getItem('cimLang') || 'fr';
-  var langToggle = document.getElementById('langToggle');
+  var isAr = document.documentElement.lang === 'ar';
 
-  function t(key, frFallback) {
-    return (currentLang === 'ar' && window.AR_TRANSLATIONS && window.AR_TRANSLATIONS[key]) || frFallback;
-  }
-
-  function applyTranslations(lang) {
-    document.querySelectorAll('[data-i18n]').forEach(function (el) {
-      var key = el.getAttribute('data-i18n');
-      if (!el.hasAttribute('data-fr-text')) el.setAttribute('data-fr-text', el.textContent);
-      var frText = el.getAttribute('data-fr-text');
-      el.textContent = (lang === 'ar' && AR_TRANSLATIONS[key]) ? AR_TRANSLATIONS[key] : frText;
-    });
-
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
-      var key = el.getAttribute('data-i18n-placeholder');
-      if (!el.hasAttribute('data-fr-placeholder')) el.setAttribute('data-fr-placeholder', el.getAttribute('placeholder') || '');
-      var frText = el.getAttribute('data-fr-placeholder');
-      el.setAttribute('placeholder', (lang === 'ar' && AR_TRANSLATIONS[key]) ? AR_TRANSLATIONS[key] : frText);
-    });
-
-    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
-      var key = el.getAttribute('data-i18n-aria');
-      if (!el.hasAttribute('data-fr-aria')) el.setAttribute('data-fr-aria', el.getAttribute('aria-label') || '');
-      var frText = el.getAttribute('data-fr-aria');
-      el.setAttribute('aria-label', (lang === 'ar' && AR_TRANSLATIONS[key]) ? AR_TRANSLATIONS[key] : frText);
-    });
-
-    document.documentElement.setAttribute('lang', lang);
-    document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-
-    if (langToggle) langToggle.textContent = lang === 'ar' ? 'FR' : 'عربي';
-
-    currentLang = lang;
-    localStorage.setItem('cimLang', lang);
-  }
-
-  if (langToggle) {
-    langToggle.addEventListener('click', function () {
-      applyTranslations(currentLang === 'ar' ? 'fr' : 'ar');
-    });
-  }
-
-  applyTranslations(currentLang);
+  var L = isAr ? {
+    moreOpen: 'اقرأ المزيد',
+    moreClose: 'عرض أقل',
+    errorName: 'يرجى إدخال اسمكم.',
+    errorPhone: 'يرجى إدخال رقم هاتف صحيح.',
+    waGreeting: 'مرحبًا، أرغب في حجز موعد.',
+    waName: 'الاسم: ',
+    waPhone: 'الهاتف: ',
+    waService: 'الخدمة المطلوبة: ',
+    waDateLabel: 'التاريخ المطلوب: ',
+    waAt: ' الساعة ',
+    waTimeLabel: 'الوقت المطلوب: ',
+    waMessage: 'رسالة: '
+  } : {
+    moreOpen: 'En savoir plus',
+    moreClose: 'Voir moins',
+    errorName: 'Veuillez indiquer votre nom.',
+    errorPhone: 'Veuillez indiquer un numéro de téléphone valide.',
+    waGreeting: 'Bonjour, je souhaite prendre rendez-vous.',
+    waName: 'Nom : ',
+    waPhone: 'Téléphone : ',
+    waService: 'Service souhaité : ',
+    waDateLabel: 'Date souhaitée : ',
+    waAt: ' à ',
+    waTimeLabel: 'Heure souhaitée : ',
+    waMessage: 'Message : '
+  };
 
   /* Menu burger */
   var burgerBtn = document.getElementById('burgerBtn');
@@ -70,9 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function updateMoreToggleLabel(btn) {
     var isOpen = btn.getAttribute('aria-expanded') === 'true';
-    btn.querySelector('.service-more-toggle-text').textContent = isOpen
-      ? t('js.moreClose', 'Voir moins')
-      : t('js.moreOpen', 'En savoir plus');
+    btn.querySelector('.service-more-toggle-text').textContent = isOpen ? L.moreClose : L.moreOpen;
   }
 
   moreToggles.forEach(function (btn) {
@@ -83,12 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
       updateMoreToggleLabel(btn);
     });
   });
-
-  if (langToggle) {
-    langToggle.addEventListener('click', function () {
-      moreToggles.forEach(updateMoreToggleLabel);
-    });
-  }
 
   /* Accordéon FAQ */
   document.querySelectorAll('.faq-question').forEach(function (btn) {
@@ -123,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
         input: document.getElementById('name'),
         error: document.getElementById('nameError'),
         validate: function (value) {
-          return value.trim().length > 0 ? '' : t('js.errorName', 'Veuillez indiquer votre nom.');
+          return value.trim().length > 0 ? '' : L.errorName;
         }
       },
       phone: {
@@ -131,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         error: document.getElementById('phoneError'),
         validate: function (value) {
           var pattern = /^[0-9+\s-]{8,}$/;
-          return pattern.test(value.trim()) ? '' : t('js.errorPhone', 'Veuillez indiquer un numéro de téléphone valide.');
+          return pattern.test(value.trim()) ? '' : L.errorPhone;
         }
       }
     };
@@ -176,20 +151,20 @@ document.addEventListener('DOMContentLoaded', function () {
       var message = document.getElementById('message').value.trim();
 
       var lines = [
-        t('wa.greeting', 'Bonjour, je souhaite prendre rendez-vous.'),
-        t('wa.name', 'Nom : ') + name,
-        t('wa.phone', 'Téléphone : ') + phone
+        L.waGreeting,
+        L.waName + name,
+        L.waPhone + phone
       ];
-      if (service) lines.push(t('wa.service', 'Service souhaité : ') + service);
+      if (service) lines.push(L.waService + service);
       if (apptDate) {
         var d = apptDate.split('-');
-        var dateLabel = t('wa.dateLabel', 'Date souhaitée : ') + d[2] + '/' + d[1] + '/' + d[0];
-        if (apptTime) dateLabel += t('wa.at', ' à ') + apptTime;
+        var dateLabel = L.waDateLabel + d[2] + '/' + d[1] + '/' + d[0];
+        if (apptTime) dateLabel += L.waAt + apptTime;
         lines.push(dateLabel);
       } else if (apptTime) {
-        lines.push(t('wa.timeLabel', 'Heure souhaitée : ') + apptTime);
+        lines.push(L.waTimeLabel + apptTime);
       }
-      if (message) lines.push(t('wa.message', 'Message : ') + message);
+      if (message) lines.push(L.waMessage + message);
 
       var whatsappUrl = 'https://wa.me/213552055077?text=' + encodeURIComponent(lines.join('\n'));
       window.open(whatsappUrl, '_blank', 'noopener');
