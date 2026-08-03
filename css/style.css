@@ -152,6 +152,24 @@ body::after { right: 0; }
   box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
 }
 
+.btn-facebook {
+  background: var(--facebook-blue);
+  color: #FFFFFF;
+}
+.btn-facebook:hover {
+  background: var(--facebook-blue-dark);
+  transform: translateY(-3px);
+}
+
+.btn-instagram {
+  background: var(--instagram-pink);
+  color: #FFFFFF;
+}
+.btn-instagram:hover {
+  background: var(--instagram-pink-dark);
+  transform: translateY(-3px);
+}
+
 /* ===== Navbar ===== */
 .navbar {
   position: fixed;
