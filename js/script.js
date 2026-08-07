@@ -394,6 +394,12 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
 
+    function keepRepliesLast() {
+      var rep = body.querySelector('.chat-replies');
+      if (rep) body.appendChild(rep);
+      scrollBottom();
+    }
+
     function handleReply(r) {
       if (r.to) {
         clearReplies();
@@ -403,12 +409,15 @@ document.addEventListener('DOMContentLoaded', function () {
         addUser(r.label);
         var msg = r.msg === 'rdv' ? C.waMsgRdv : C.waMsgGeneric;
         window.open(waLink + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+        keepRepliesLast();
       } else if (r.act === 'tel') {
         addUser(r.label);
         window.location.href = telLink;
+        keepRepliesLast();
       } else if (r.act === 'maps') {
         addUser(r.label);
         window.open(mapsUrl, '_blank', 'noopener');
+        keepRepliesLast();
       }
     }
 

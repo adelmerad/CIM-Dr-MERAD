@@ -1211,7 +1211,7 @@ html[dir="rtl"] .landmarks li::before {
   justify-content: center;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
-.chat-launcher .chat-ic-close { position: absolute; opacity: 0; transform: rotate(-45deg); }
+.chat-launcher .chat-ic-close { position: absolute; inset: 0; opacity: 0; transform: rotate(-45deg); }
 .chat-launcher.active .chat-ic-open { opacity: 0; transform: rotate(45deg); }
 .chat-launcher.active .chat-ic-close { opacity: 1; transform: rotate(0); }
 
