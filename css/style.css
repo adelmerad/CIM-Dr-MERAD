@@ -1117,6 +1117,9 @@ body::after { right: 0; }
 @media (max-width: 768px) {
   .site-title { display: none; }
 
+  /* Logo à un bord, burger à l'autre (le titre central est masqué sur mobile) */
+  .navbar-inner { justify-content: space-between; }
+
   .form-row { flex-direction: column; gap: 0; }
 
   .nav-links {
