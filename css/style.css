@@ -1135,7 +1135,7 @@ body::after { right: 0; }
     transition: max-height 0.35s ease;
   }
   .nav-links.active {
-    max-height: 320px;
+    max-height: 460px;
     border-bottom: 1px solid var(--secondary);
   }
   .nav-link {
