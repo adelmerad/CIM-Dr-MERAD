@@ -1,30 +1,5 @@
-# Réponses aux avis Google en attente — CIM Dr MERAD
+# Réponses aux avis Google — CIM Dr MERAD
 
-8 avis sans réponse, prêts à copier-coller. Réponds-y idéalement sur 2-3 jours plutôt que d'un coup, pour que ça reste naturel.
+✅ **Aucune réponse en attente.** Tous les avis ont reçu une réponse (mis à jour le 2026-08-09).
 
----
-
-### Sewsen Belkilali (5 j)
-> Merci beaucoup pour votre confiance et pour ce joli retour !
-
----
-
-### Niama Osmani (16 sem.)
-> Merci infiniment pour votre visite et votre note, ça nous fait très plaisir !
-
----
-
-### Sagouma Walid (16 sem.)
-> Merci pour votre confiance, au plaisir de vous accueillir à nouveau.
-
----
-
-### أحمد شكري (16 sem.)
-> Merci beaucoup pour votre soutien et votre confiance !
-
----
-
-### Yasmina Maamir (17 sem.)
-> Merci pour votre passage et votre belle note, à bientôt !
-
-
+Pense à revenir répondre aux nouveaux avis au fil de l'eau — idéalement sous quelques jours, de façon régulière, pour montrer que le centre est actif et à l'écoute.
