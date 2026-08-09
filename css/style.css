@@ -890,6 +890,27 @@ body::after { right: 0; }
   margin-top: 6px;
 }
 
+.form-sent {
+  display: none;
+  align-items: center;
+  gap: 9px;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid var(--whatsapp-green);
+  color: var(--primary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.form-sent.visible {
+  display: flex;
+}
+.form-sent svg {
+  flex: 0 0 auto;
+  color: var(--whatsapp-green-dark);
+}
+
 .contact-side {
   background: var(--primary);
   border-radius: 16px;
