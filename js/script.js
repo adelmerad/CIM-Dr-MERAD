@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
     waDateLabel: 'التاريخ المطلوب: ',
     waAt: ' الساعة ',
     waTimeLabel: 'الوقت المطلوب: ',
-    waMessage: 'رسالة: '
+    waMessage: 'رسالة: ',
+    formSent: 'شكرًا! تم إرسال طلبكم بنجاح. يُرجى الانتظار، سنردّ عليكم في أقرب وقت.'
   } : {
     moreOpen: 'En savoir plus',
     moreClose: 'Voir moins',
@@ -27,7 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
     waDateLabel: 'Date souhaitée : ',
     waAt: ' à ',
     waTimeLabel: 'Heure souhaitée : ',
-    waMessage: 'Message : '
+    waMessage: 'Message : ',
+    formSent: 'Merci ! Votre demande a bien été envoyée. Patientez, nous vous répondrons dans les plus brefs délais.'
   };
 
   /* Menu burger */
@@ -168,6 +170,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var whatsappUrl = 'https://wa.me/213552055077?text=' + encodeURIComponent(lines.join('\n'));
       window.open(whatsappUrl, '_blank', 'noopener');
+
+      var sentMsg = document.getElementById('formSentMsg');
+      if (!sentMsg) {
+        sentMsg = document.createElement('div');
+        sentMsg.id = 'formSentMsg';
+        sentMsg.className = 'form-sent';
+        sentMsg.setAttribute('role', 'status');
+        sentMsg.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span></span>';
+        form.appendChild(sentMsg);
+      }
+      sentMsg.querySelector('span').textContent = L.formSent;
+      sentMsg.classList.add('visible');
     });
   }
 
