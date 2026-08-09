@@ -131,17 +131,6 @@ body::after { right: 0; }
   transform: translateY(-3px);
 }
 
-.btn-dark {
-  background: var(--primary);
-  color: #FFFFFF;
-  width: 100%;
-}
-.btn-dark:hover {
-  background: var(--secondary);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
-}
-
 .btn-whatsapp {
   background: var(--whatsapp-green);
   color: #FFFFFF;
