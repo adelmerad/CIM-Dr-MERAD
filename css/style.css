@@ -1026,12 +1026,6 @@ body::after { right: 0; }
   flex: 0 0 auto;
 }
 
-.footer-social {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .copyright {
   text-align: center;
   color: var(--text-neutral);
