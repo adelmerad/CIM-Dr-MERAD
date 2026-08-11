@@ -348,6 +348,15 @@ body::after { right: 0; }
   background: var(--text-secondary);
 }
 
+.section-intro-dark {
+  max-width: 720px;
+  margin: 0 auto 46px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.03rem;
+  line-height: 1.7;
+}
+
 .section-line-left {
   margin: 18px 0 32px;
 }
