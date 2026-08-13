@@ -399,6 +399,10 @@ body::after { right: 0; }
   background: var(--bg-light);
   border-radius: 10px;
   margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+.service-card:hover .service-photo {
+  transform: scale(1.05);
 }
 
 .service-icon {
