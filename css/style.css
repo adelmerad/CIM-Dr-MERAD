@@ -569,11 +569,29 @@ body::after { right: 0; }
 .why-card {
   text-align: center;
   padding: 20px;
+  transition: transform 0.25s ease;
+}
+.why-card:hover {
+  transform: translateY(-4px);
 }
 
 .why-icon {
   display: inline-flex;
   margin-bottom: 18px;
+  transition: transform 0.25s ease;
+}
+.why-card:hover .why-icon {
+  transform: scale(1.1);
+}
+
+/* Accessibilité : couper les animations si l'utilisateur les a désactivées */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 .why-icon svg {
   width: 44px;
