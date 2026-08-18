@@ -91,6 +91,18 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(el);
   });
 
+  /* Suivi GA4 : clics WhatsApp / téléphone (event generate_lead) */
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href]');
+    if (!link || typeof gtag !== 'function') return;
+    var href = link.getAttribute('href');
+    if (href.indexOf('wa.me') !== -1) {
+      gtag('event', 'generate_lead', { method: 'whatsapp' });
+    } else if (href.indexOf('tel:') === 0) {
+      gtag('event', 'generate_lead', { method: 'telephone' });
+    }
+  });
+
   /* Demande de rendez-vous → WhatsApp */
   var form = document.getElementById('contactForm');
 
@@ -170,6 +182,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var whatsappUrl = 'https://wa.me/213552055077?text=' + encodeURIComponent(lines.join('\n'));
       window.open(whatsappUrl, '_blank', 'noopener');
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', { method: 'form_whatsapp' });
+      }
 
       var sentMsg = document.getElementById('formSentMsg');
       if (!sentMsg) {
@@ -423,10 +439,12 @@ document.addEventListener('DOMContentLoaded', function () {
         addUser(r.label);
         var msg = r.msg === 'rdv' ? C.waMsgRdv : C.waMsgGeneric;
         window.open(waLink + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { method: 'whatsapp' });
         keepRepliesLast();
       } else if (r.act === 'tel') {
         addUser(r.label);
         window.location.href = telLink;
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { method: 'telephone' });
         keepRepliesLast();
       } else if (r.act === 'maps') {
         addUser(r.label);
