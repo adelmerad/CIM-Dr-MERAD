@@ -1455,3 +1455,44 @@ html[dir="rtl"] .landmarks li::before {
     max-height: calc(100vh - 120px);
   }
 }
+
+/* ===== Bandeau promo Octobre Rose ===== */
+.promo-banner {
+  background: linear-gradient(90deg, #C2185B, #E6007E);
+}
+.promo-banner-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 14px 24px;
+  text-align: center;
+}
+.promo-banner-badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+.promo-banner-text {
+  color: #fff;
+  font-size: 0.95rem;
+  margin: 0;
+}
+.promo-banner-btn {
+  background: #fff;
+  color: #C2185B;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 8px 20px;
+  border-radius: 50px;
+  white-space: nowrap;
+  transition: transform 0.2s ease;
+}
+.promo-banner-btn:hover {
+  transform: translateY(-2px);
+}
