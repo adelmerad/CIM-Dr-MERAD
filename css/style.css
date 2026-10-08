@@ -16,6 +16,7 @@
   --instagram-pink-dark: #9c2a6a;
   --navbar-height: 84px;
   --side-bar-width: 6px;
+  --announce-height: 56px;
 }
 
 * {
@@ -26,7 +27,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--navbar-height);
+  scroll-padding-top: calc(var(--navbar-height) + var(--announce-height));
 }
 
 body {
@@ -272,12 +273,12 @@ body::after { right: 0; }
 
 /* ===== Hero ===== */
 .hero {
-  min-height: calc(100vh - var(--navbar-height));
+  min-height: calc(100vh - var(--navbar-height) - var(--announce-height));
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 24px 60px;
+  padding: calc(40px + var(--announce-height)) 24px 60px;
   background: linear-gradient(160deg, var(--primary) 0%, var(--secondary) 100%);
 }
 
@@ -1185,6 +1186,7 @@ body::after { right: 0; }
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.35s ease;
+    z-index: 895;
   }
   .nav-links.active {
     max-height: calc(100vh - var(--navbar-height));
@@ -1459,18 +1461,22 @@ html[dir="rtl"] .landmarks li::before {
 /* ===== Bandeau promo Octobre Rose ===== */
 .announce-strip {
   background: linear-gradient(90deg, #C2185B, #E6007E);
-  margin-top: var(--navbar-height);
-  position: sticky;
+  position: fixed;
   top: var(--navbar-height);
+  left: 0;
+  right: 0;
+  height: var(--announce-height);
   z-index: 890;
+  overflow: hidden;
 }
 .announce-strip-inner {
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding: 14px 24px;
+  padding: 0 24px;
   text-align: center;
 }
 .announce-strip-badge {
@@ -1481,17 +1487,22 @@ html[dir="rtl"] .landmarks li::before {
   padding: 6px 14px;
   border-radius: 50px;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .announce-strip-text {
   color: #fff;
   font-size: 0.95rem;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .announce-strip-btn {
   background: #fff;
   color: #C2185B;
   font-weight: 600;
   font-size: 0.88rem;
+  flex-shrink: 0;
   padding: 8px 20px;
   border-radius: 50px;
   white-space: nowrap;
@@ -1499,4 +1510,12 @@ html[dir="rtl"] .landmarks li::before {
 }
 .announce-strip-btn:hover {
   transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  :root { --announce-height: 48px; }
+  .announce-strip-inner { gap: 10px; padding: 0 14px; }
+  .announce-strip-text { display: none; }
+  .announce-strip-badge { font-size: 0.78rem; padding: 5px 12px; }
+  .announce-strip-btn { font-size: 0.8rem; padding: 7px 16px; }
 }
