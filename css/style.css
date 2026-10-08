@@ -272,12 +272,12 @@ body::after { right: 0; }
 
 /* ===== Hero ===== */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - var(--navbar-height));
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: calc(var(--navbar-height) + 40px) 24px 60px;
+  padding: 40px 24px 60px;
   background: linear-gradient(160deg, var(--primary) 0%, var(--secondary) 100%);
 }
 
@@ -1459,6 +1459,7 @@ html[dir="rtl"] .landmarks li::before {
 /* ===== Bandeau promo Octobre Rose ===== */
 .promo-banner {
   background: linear-gradient(90deg, #C2185B, #E6007E);
+  margin-top: var(--navbar-height);
 }
 .promo-banner-inner {
   display: flex;
