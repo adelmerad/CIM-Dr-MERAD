@@ -1460,6 +1460,9 @@ html[dir="rtl"] .landmarks li::before {
 .announce-strip {
   background: linear-gradient(90deg, #C2185B, #E6007E);
   margin-top: var(--navbar-height);
+  position: sticky;
+  top: var(--navbar-height);
+  z-index: 890;
 }
 .announce-strip-inner {
   display: flex;
