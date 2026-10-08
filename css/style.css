@@ -1457,11 +1457,11 @@ html[dir="rtl"] .landmarks li::before {
 }
 
 /* ===== Bandeau promo Octobre Rose ===== */
-.promo-banner {
+.announce-strip {
   background: linear-gradient(90deg, #C2185B, #E6007E);
   margin-top: var(--navbar-height);
 }
-.promo-banner-inner {
+.announce-strip-inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1470,7 +1470,7 @@ html[dir="rtl"] .landmarks li::before {
   padding: 14px 24px;
   text-align: center;
 }
-.promo-banner-badge {
+.announce-strip-badge {
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
   font-weight: 600;
@@ -1479,12 +1479,12 @@ html[dir="rtl"] .landmarks li::before {
   border-radius: 50px;
   white-space: nowrap;
 }
-.promo-banner-text {
+.announce-strip-text {
   color: #fff;
   font-size: 0.95rem;
   margin: 0;
 }
-.promo-banner-btn {
+.announce-strip-btn {
   background: #fff;
   color: #C2185B;
   font-weight: 600;
@@ -1494,6 +1494,6 @@ html[dir="rtl"] .landmarks li::before {
   white-space: nowrap;
   transition: transform 0.2s ease;
 }
-.promo-banner-btn:hover {
+.announce-strip-btn:hover {
   transform: translateY(-2px);
 }
