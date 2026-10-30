@@ -1519,3 +1519,19 @@ html[dir="rtl"] .landmarks li::before {
   .announce-strip-badge { font-size: 0.78rem; padding: 5px 12px; }
   .announce-strip-btn { font-size: 0.8rem; padding: 7px 16px; }
 }
+
+/* Clignotement doux du bandeau (dernier jour de l'offre) */
+@keyframes announce-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+.announce-strip-badge,
+.announce-strip-btn {
+  animation: announce-pulse 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announce-strip-badge,
+  .announce-strip-btn { animation: none; }
+}
