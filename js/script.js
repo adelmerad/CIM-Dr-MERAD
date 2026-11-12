@@ -76,20 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* Carte Google : chargement anticipe (environ un ecran avant d'y arriver) */
-  var mapFrame = document.querySelector('.map-wrap iframe[data-src]');
-  if (mapFrame) {
-    var loadMap = function () { mapFrame.src = mapFrame.getAttribute('data-src'); mapFrame.removeAttribute('data-src'); };
-    if ('IntersectionObserver' in window) {
-      var mapObserver = new IntersectionObserver(function (entries) {
-        if (entries[0].isIntersecting) { loadMap(); mapObserver.disconnect(); }
-      }, { rootMargin: '1200px 0px' });
-      mapObserver.observe(mapFrame);
-    } else {
-      loadMap();
-    }
-  }
-
   /* Fade-in on scroll */
   var fadeEls = document.querySelectorAll('.fade-in');
   var observer = new IntersectionObserver(function (entries) {
