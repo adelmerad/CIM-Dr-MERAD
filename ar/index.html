@@ -491,19 +491,10 @@
       <div class="location-grid">
         <div class="map-wrap">
           <iframe
-            data-src="https://www.google.com/maps?q=CIM+Dr+MERAD,36.6447298,2.9938945&z=17&hl=ar&output=embed"
-            width="100%" height="100%" style="border:0;" allowfullscreen=""
+            src="https://www.google.com/maps?q=CIM+Dr+MERAD,36.6447298,2.9938945&z=17&hl=ar&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade" title="موقع المركز">
           </iframe>
-          <script>
-            (function () {
-              var f = document.currentScript.previousElementSibling;
-              function load() { if (f.getAttribute('data-src')) { f.src = f.getAttribute('data-src'); f.removeAttribute('data-src'); } }
-              if (!('IntersectionObserver' in window)) { load(); return; }
-              var o = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { load(); o.disconnect(); } }, { rootMargin: '1200px 0px' });
-              o.observe(f);
-            })();
-          </script>
         </div>
         <div class="location-info fade-in">
           <img src="../assets/photo-facade.jpg" alt="واجهة مركز CIM الدكتور مراد في بئر توتة" class="facade-photo" width="960" height="342" loading="lazy">
