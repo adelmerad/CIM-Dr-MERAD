@@ -72,4 +72,22 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/mammographie/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/mammographie/" />
   </url>
+  <url>
+    <loc>https://cimdrmerad.com/panoramique-dentaire/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/panoramique-dentaire/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/panoramique-dentaire/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/panoramique-dentaire/" />
+  </url>
+  <url>
+    <loc>https://cimdrmerad.com/ar/panoramique-dentaire/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/panoramique-dentaire/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/panoramique-dentaire/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/panoramique-dentaire/" />
+  </url>
 </urlset>
