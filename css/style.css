@@ -1574,3 +1574,10 @@ html[dir="rtl"] .prep-list li { border-left: none; border-right: 4px solid var(-
   .exam-intro-grid { grid-template-columns: 1fr; }
   .exam-photo { max-width: 420px; margin: 0 auto; }
 }
+.reviews-summary {
+  text-align: center;
+  margin: -30px 0 36px;
+  color: var(--accent);
+  font-size: 1rem;
+}
+.reviews-summary strong { color: var(--primary); }
