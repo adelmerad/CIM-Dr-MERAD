@@ -1548,3 +1548,4 @@ html[dir="rtl"] .prep-list li { border-left: none; border-right: 4px solid var(-
   text-underline-offset: 3px;
 }
 .service-page-link:hover { color: var(--accent); }
+.service-card-link { display: block; color: inherit; cursor: pointer; }
