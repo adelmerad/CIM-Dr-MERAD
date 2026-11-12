@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function () {
           { label: '🕐 أوقات العمل', to: 'horaires' },
           { label: '↩︎ القائمة', to: 'menu' }
         ] },
-        examens: { bot: 'نقوم بالفحوصات التالية:<br>• سكانير 64 شريحة (القولون / الأوعية / الأمعاء)<br>• تصوير بالصدى ودوبلر<br>• أشعة رقمية<br>• ماموغرافيا<br>• بانوراما الأسنان<br>• خزعة وبزل موجّهان<br><br>لا نقوم بالتصوير بالرنين المغناطيسي (IRM).', replies: [
+        examens: { bot: 'نقوم بالفحوصات التالية:<br>• سكانير 64 شريحة (القولون / الأوعية / الأمعاء)<br>• تصوير بالصدى ودوبلر<br>• أشعة رقمية<br>• ماموغرافيا<br>• بانوراما الأسنان<br>• بزل موجّه بالإيكوغرافيا<br><br>لا نقوم بالتصوير بالرنين المغناطيسي (IRM).', replies: [
           { label: '📋 التحضير والوثائق', to: 'preparation' },
           { label: '📅 حجز موعد', to: 'rdv' },
           { label: '↩︎ القائمة', to: 'menu' }
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function () {
           { label: '🕐 Horaires', to: 'horaires' },
           { label: '↩︎ Menu', to: 'menu' }
         ] },
-        examens: { bot: 'Nous réalisons :<br>• Scanner 64 coupes (colo / angio / entéro-scanner)<br>• Échographie & Écho-doppler<br>• Radiologie numérisée<br>• Mammographie<br>• Panoramique dentaire<br>• Ponction & biopsie guidées<br><br>Nous ne réalisons pas l’IRM.', replies: [
+        examens: { bot: 'Nous réalisons :<br>• Scanner 64 coupes (colo / angio / entéro-scanner)<br>• Échographie & Écho-doppler<br>• Radiologie numérisée<br>• Mammographie<br>• Panoramique dentaire<br>• Cytoponction échoguidée<br><br>Nous ne réalisons pas l’IRM.', replies: [
           { label: '📋 Préparation & documents', to: 'preparation' },
           { label: '📅 Prendre rendez-vous', to: 'rdv' },
           { label: '↩︎ Menu', to: 'menu' }
