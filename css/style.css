@@ -272,12 +272,12 @@ body::after { right: 0; }
 
 /* ===== Hero ===== */
 .hero {
-  min-height: calc(100vh - var(--navbar-height));
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px 24px 60px;
+  padding: calc(var(--navbar-height) + 40px) 24px 60px;
   background: linear-gradient(160deg, var(--primary) 0%, var(--secondary) 100%);
 }
 
@@ -1185,7 +1185,6 @@ body::after { right: 0; }
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.35s ease;
-    z-index: 895;
   }
   .nav-links.active {
     max-height: calc(100vh - var(--navbar-height));
