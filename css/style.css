@@ -1549,3 +1549,28 @@ html[dir="rtl"] .prep-list li { border-left: none; border-right: 4px solid var(-
 }
 .service-page-link:hover { color: var(--accent); }
 .service-card-link { display: block; color: inherit; cursor: pointer; }
+.exam-intro-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.exam-intro-grid .exam-intro { margin: 0; }
+.exam-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.10);
+}
+.exam-photo figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-neutral);
+}
+@media (max-width: 800px) {
+  .exam-intro-grid { grid-template-columns: 1fr; }
+  .exam-photo { max-width: 420px; margin: 0 auto; }
+}
