@@ -54,4 +54,22 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/echographie/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/echographie/" />
   </url>
+  <url>
+    <loc>https://cimdrmerad.com/mammographie/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/mammographie/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/mammographie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/mammographie/" />
+  </url>
+  <url>
+    <loc>https://cimdrmerad.com/ar/mammographie/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/mammographie/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/mammographie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/mammographie/" />
+  </url>
 </urlset>
