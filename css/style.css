@@ -132,13 +132,13 @@ body::after { right: 0; }
 }
 
 .btn-whatsapp {
-  background: var(--whatsapp-green);
+  background: #15803D;
   color: #FFFFFF;
 }
 .btn-whatsapp:hover {
-  background: var(--whatsapp-green-dark);
+  background: #116B32;
   transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 10px 24px rgba(21, 128, 61, 0.35);
 }
 
 .btn-facebook {
@@ -1090,7 +1090,7 @@ body::after { right: 0; }
 
 .copyright {
   text-align: center;
-  color: var(--text-neutral);
+  color: var(--text-secondary);
   font-size: 0.8rem;
   padding: 20px 0;
 }
@@ -1473,13 +1473,13 @@ html[dir="rtl"] .landmarks li::before {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
-  background: var(--whatsapp-green);
+  background: #15803D;
   color: #fff;
   font-weight: 600;
   font-size: 0.88rem;
   transition: background 0.2s ease;
 }
-.chat-wa-btn:hover { background: var(--whatsapp-green-dark); }
+.chat-wa-btn:hover { background: #116B32; }
 
 @media (max-width: 480px) {
   .chat-panel {
