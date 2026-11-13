@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
           { label: '🕐 أوقات العمل', to: 'horaires' },
           { label: '↩︎ القائمة', to: 'menu' }
         ] },
-        horaires: { bot: 'نستقبلكم <strong>من السبت إلى الخميس، من الساعة 8:30 إلى 17:00</strong>.<br>مغلق يوم الجمعة.', replies: [
+        horaires: { bot: 'نستقبلكم <strong>من السبت إلى الخميس، من الساعة 8:30 إلى 16:30</strong>.<br>مغلق يوم الجمعة.', replies: [
           { label: '📅 حجز موعد', to: 'rdv' },
           { label: '📍 العنوان والوصول', to: 'adresse' },
           { label: '↩︎ القائمة', to: 'menu' }
@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
           { label: '🕐 Vos horaires', to: 'horaires' },
           { label: '↩︎ Menu', to: 'menu' }
         ] },
-        horaires: { bot: 'Nous sommes ouverts <strong>du samedi au jeudi, de 8h30 à 17h</strong>.<br>Fermé le vendredi.', replies: [
+        horaires: { bot: 'Nous sommes ouverts <strong>du samedi au jeudi, de 8h30 à 16h30</strong>.<br>Fermé le vendredi.', replies: [
           { label: '📅 Prendre rendez-vous', to: 'rdv' },
           { label: '📍 Adresse & accès', to: 'adresse' },
           { label: '↩︎ Menu', to: 'menu' }
