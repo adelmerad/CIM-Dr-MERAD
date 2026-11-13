@@ -1024,6 +1024,7 @@ body::after { right: 0; }
 .footer-inner {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
   gap: 32px;
   padding-bottom: 40px;
   border-bottom: 1px solid var(--accent);
