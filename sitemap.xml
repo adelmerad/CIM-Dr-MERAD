@@ -144,4 +144,22 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/recrutement/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/recrutement/" />
   </url>
+  <url>
+    <loc>https://cimdrmerad.com/confidentialite/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/confidentialite/" />
+  </url>
+  <url>
+    <loc>https://cimdrmerad.com/ar/confidentialite/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/confidentialite/" />
+  </url>
 </urlset>
