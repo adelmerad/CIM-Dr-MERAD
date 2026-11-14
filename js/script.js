@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     moreClose: 'عرض أقل',
     errorName: 'يرجى إدخال اسمكم.',
     errorPhone: 'يرجى إدخال رقم هاتف صحيح.',
-    waGreeting: 'مرحبًا، أرغب في حجز موعد.',
+    waGreeting: 'مرحبًا، أرغب في الاستفسار عن فحص.',
     waName: 'الاسم: ',
     waPhone: 'الهاتف: ',
     waService: 'الخدمة المطلوبة: ',
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     moreClose: 'Voir moins',
     errorName: 'Veuillez indiquer votre nom.',
     errorPhone: 'Veuillez indiquer un numéro de téléphone valide.',
-    waGreeting: 'Bonjour, je souhaite prendre rendez-vous.',
+    waGreeting: 'Bonjour, je souhaite des informations sur un examen.',
     waName: 'Nom : ',
     waPhone: 'Téléphone : ',
     waService: 'Service souhaité : ',
@@ -114,16 +114,20 @@ document.addEventListener('DOMContentLoaded', function () {
         validate: function (value) {
           return value.trim().length > 0 ? '' : L.errorName;
         }
-      },
-      phone: {
-        input: document.getElementById('phone'),
+      }
+    };
+    /* Champ téléphone : seulement s'il existe encore dans la page (compatibilité) */
+    var phoneInput = document.getElementById('phone');
+    if (phoneInput && document.getElementById('phoneError')) {
+      fields.phone = {
+        input: phoneInput,
         error: document.getElementById('phoneError'),
         validate: function (value) {
           var pattern = /^[0-9+\s-]{8,}$/;
           return pattern.test(value.trim()) ? '' : L.errorPhone;
         }
-      }
-    };
+      };
+    }
 
     function setFieldError(field, message) {
       var group = field.input.closest('.form-group');
@@ -157,18 +161,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (!isValid) return;
 
+      var val = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
       var name = fields.name.input.value.trim();
-      var phone = fields.phone.input.value.trim();
-      var service = document.getElementById('service').value;
-      var apptDate = document.getElementById('apptDate').value;
-      var apptTime = document.getElementById('apptTime').value;
-      var message = document.getElementById('message').value.trim();
+      var phone = fields.phone ? fields.phone.input.value.trim() : '';
+      var service = val('service');
+      var apptDate = val('apptDate');
+      var apptTime = val('apptTime');
+      var message = val('message');
 
-      var lines = [
-        L.waGreeting,
-        L.waName + name,
-        L.waPhone + phone
-      ];
+      var lines = [L.waGreeting, L.waName + name];
+      if (phone) lines.push(L.waPhone + phone);
       if (service) lines.push(L.waService + service);
       if (apptDate) {
         var d = apptDate.split('-');
