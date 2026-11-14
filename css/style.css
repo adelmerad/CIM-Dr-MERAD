@@ -1714,3 +1714,7 @@ picture { display: contents; }
 .copyright a { color: var(--text-secondary); text-decoration: underline; text-underline-offset: 2px; }
 .copyright a:hover { color: #FFFFFF; }
 .prep-list a { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+/* Accueil : H1 = sous-titre du hero (nom + Birtouta), apparence inchangée */
+.site-title, .hero-title { font-family: 'Poppins', 'Inter', Arial, sans-serif; }
+.hero-subtitle { font-family: 'Inter', Arial, sans-serif; font-weight: 400; line-height: 1.6; }
+html[dir="rtl"] .site-title, html[dir="rtl"] .hero-title, html[dir="rtl"] .hero-subtitle { font-family: 'Cairo', 'Inter', Arial, sans-serif; }
