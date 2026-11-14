@@ -1677,3 +1677,27 @@ picture { display: contents; }
   .back-to-top { width: 42px; height: 42px; left: 17px; bottom: 74px; }
   .copyright { padding-bottom: 80px; }
 }
+
+/* ===== Badge note Google (premier écran) ===== */
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: -18px auto 28px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+  font-size: 0.92rem;
+  transition: background 0.2s ease;
+}
+.rating-badge:hover { background: rgba(255, 255, 255, 0.18); }
+.rating-badge svg { flex-shrink: 0; background: #FFFFFF; border-radius: 50%; padding: 2px; width: 20px; height: 20px; }
+.rating-stars { color: #FBBC05; letter-spacing: 1px; }
+.rating-badge strong { font-size: 1rem; }
+.rating-count { color: var(--text-secondary); }
+.page-hero .rating-badge { margin: -10px auto 26px; }
+@media (max-width: 480px) {
+  .rating-badge { font-size: 0.84rem; padding: 7px 13px; gap: 6px; }
+}
