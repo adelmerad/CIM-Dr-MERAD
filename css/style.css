@@ -1662,3 +1662,18 @@ a.gallery-item:hover img { transform: scale(1.05); }
 .faq-answer a { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 /* WebP : <picture> n'influence pas la mise en page, l'image garde son comportement d'origine */
 picture { display: contents; }
+
+/* ===== Boutons flottants : ne jamais cacher le bas de page sur mobile ===== */
+@media (max-width: 768px) {
+  .copyright { padding-bottom: 96px; }
+}
+@media (max-width: 480px) {
+  .whatsapp-float, .facebook-float, .instagram-float { width: 48px; height: 48px; right: 14px; }
+  .whatsapp-float { bottom: 16px; }
+  .facebook-float { bottom: 72px; }
+  .instagram-float { bottom: 128px; }
+  .whatsapp-float svg, .facebook-float svg, .instagram-float svg { width: 22px; height: 22px; }
+  .chat-launcher { width: 48px; height: 48px; left: 14px; bottom: 16px; }
+  .back-to-top { width: 42px; height: 42px; left: 17px; bottom: 74px; }
+  .copyright { padding-bottom: 80px; }
+}
