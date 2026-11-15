@@ -1718,3 +1718,13 @@ picture { display: contents; }
 .site-title, .hero-title { font-family: 'Poppins', 'Inter', Arial, sans-serif; }
 .hero-subtitle { font-family: 'Inter', Arial, sans-serif; font-weight: 400; line-height: 1.6; }
 html[dir="rtl"] .site-title, html[dir="rtl"] .hero-title, html[dir="rtl"] .hero-subtitle { font-family: 'Cairo', 'Inter', Arial, sans-serif; }
+
+/* ===== Mobile : sections plus compactes (moins de défilement) ===== */
+@media (max-width: 768px) {
+  .services, .about, .why-us, .faq, .testimonials, .location, .contact, .gallery-section, .exam-section { padding: 56px 0; }
+  .exam-cta { padding: 48px 20px; }
+  .page-hero { padding-bottom: 44px; }
+  .section-line { margin: 14px auto 32px; }
+  .section-line-left { margin: 14px 0 24px; }
+  .gallery-intro, .reviews-summary { margin: -16px 0 24px; }
+}
