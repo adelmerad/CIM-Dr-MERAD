@@ -29,6 +29,7 @@ js/script.js       menu burger, accordéon, formulaire RDV, fade-in, retour en h
 assets/            logo, photos, favicon
 sitemap.xml
 robots.txt
+404.html 
 ```
 
 ## Développement local

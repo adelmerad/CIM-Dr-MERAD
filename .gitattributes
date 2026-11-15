@@ -1,0 +1,9 @@
+# Fins de ligne : toujours LF (format du web), sur Windows comme sur GitHub
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.xlsx binary
