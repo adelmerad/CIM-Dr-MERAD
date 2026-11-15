@@ -1732,3 +1732,7 @@ html[dir="rtl"] .site-title, html[dir="rtl"] .hero-title, html[dir="rtl"] .hero-
 /* Pied de page : titres de colonnes alignés, même espacement partout */
 .footer-contact .footer-col-title, .footer-col-title { display: block; color: #FFFFFF; font-weight: 600; font-size: 0.95rem; margin: 0 0 4px; }
 .footer-contact { gap: 10px; }
+/* Badge avis : sans fond ni cadre (plus discret) */
+.rating-badge { background: transparent; border-color: transparent; padding-left: 4px; padding-right: 4px; }
+.rating-badge:hover { background: transparent; }
+.rating-badge:hover .rating-count { color: #FFFFFF; text-decoration: underline; text-underline-offset: 2px; }
