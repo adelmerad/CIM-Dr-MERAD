@@ -1728,3 +1728,4 @@ html[dir="rtl"] .site-title, html[dir="rtl"] .hero-title, html[dir="rtl"] .hero-
   .section-line-left { margin: 14px 0 24px; }
   .gallery-intro, .reviews-summary { margin: -16px 0 24px; }
 }
+.exam-photo figcaption { color: var(--accent); }
