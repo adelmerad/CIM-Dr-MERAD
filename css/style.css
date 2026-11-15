@@ -1729,3 +1729,6 @@ html[dir="rtl"] .site-title, html[dir="rtl"] .hero-title, html[dir="rtl"] .hero-
   .gallery-intro, .reviews-summary { margin: -16px 0 24px; }
 }
 .exam-photo figcaption { color: var(--accent); }
+/* Pied de page : titres de colonnes alignés, même espacement partout */
+.footer-contact .footer-col-title, .footer-col-title { display: block; color: #FFFFFF; font-weight: 600; font-size: 0.95rem; margin: 0 0 4px; }
+.footer-contact { gap: 10px; }
