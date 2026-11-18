@@ -1736,3 +1736,6 @@ html[dir="rtl"] .site-title, html[dir="rtl"] .hero-title, html[dir="rtl"] .hero-
 .rating-badge { background: transparent; border-color: transparent; padding-left: 4px; padding-right: 4px; }
 .rating-badge:hover { background: transparent; }
 .rating-badge:hover .rating-count { color: #FFFFFF; text-decoration: underline; text-underline-offset: 2px; }
+/* Bouton LinkedIn (bloc contact accueil) */
+.btn-linkedin { background: #0A66C2; color: #FFFFFF; }
+.btn-linkedin:hover { background: #004182; transform: translateY(-3px); }
