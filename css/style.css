@@ -1739,3 +1739,5 @@ html[dir="rtl"] .site-title, html[dir="rtl"] .hero-title, html[dir="rtl"] .hero-
 /* Bouton LinkedIn (bloc contact accueil) */
 .btn-linkedin { background: #0A66C2; color: #FFFFFF; }
 .btn-linkedin:hover { background: #004182; transform: translateY(-3px); }
+/* Liens dans les paragraphes de section (articles Conseils) */
+.exam-section .container > p a { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }

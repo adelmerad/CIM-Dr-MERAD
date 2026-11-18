@@ -234,4 +234,22 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/preparer-son-scanner/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/preparer-son-scanner/" />
   </url>
+  <url>
+    <loc>https://cimdrmerad.com/conseils/mammographie-age-frequence/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/conseils/mammographie-age-frequence/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/mammographie-age-frequence/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/mammographie-age-frequence/" />
+  </url>
+  <url>
+    <loc>https://cimdrmerad.com/ar/conseils/mammographie-age-frequence/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/conseils/mammographie-age-frequence/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/mammographie-age-frequence/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/mammographie-age-frequence/" />
+  </url>
 </urlset>
