@@ -180,4 +180,40 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/dr-merad/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/dr-merad/" />
   </url>
+  <url>
+    <loc>https://cimdrmerad.com/conseils/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/conseils/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/" />
+  </url>
+  <url>
+    <loc>https://cimdrmerad.com/ar/conseils/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/conseils/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/" />
+  </url>
+  <url>
+    <loc>https://cimdrmerad.com/conseils/scanner-irm-echographie/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/conseils/scanner-irm-echographie/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/scanner-irm-echographie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/scanner-irm-echographie/" />
+  </url>
+  <url>
+    <loc>https://cimdrmerad.com/ar/conseils/scanner-irm-echographie/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/conseils/scanner-irm-echographie/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/scanner-irm-echographie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/scanner-irm-echographie/" />
+  </url>
 </urlset>
