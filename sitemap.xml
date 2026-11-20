@@ -270,4 +270,22 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/coloscanner-coloscopie/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/coloscanner-coloscopie/" />
   </url>
+  <url>
+    <loc>https://cimdrmerad.com/conseils/ordonnance-examen-imagerie/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/conseils/ordonnance-examen-imagerie/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/ordonnance-examen-imagerie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/ordonnance-examen-imagerie/" />
+  </url>
+  <url>
+    <loc>https://cimdrmerad.com/ar/conseils/ordonnance-examen-imagerie/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/conseils/ordonnance-examen-imagerie/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/ordonnance-examen-imagerie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/ordonnance-examen-imagerie/" />
+  </url>
 </urlset>
