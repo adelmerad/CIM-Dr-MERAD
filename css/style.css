@@ -1741,3 +1741,7 @@ html[dir="rtl"] .site-title, html[dir="rtl"] .hero-title, html[dir="rtl"] .hero-
 .btn-linkedin:hover { background: #004182; transform: translateY(-3px); }
 /* Liens dans les paragraphes de section (articles Conseils) */
 .exam-section .container > p a { color: var(--primary); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Bouton sombre dans un paragraphe de section (bloc Conseils accueil) */
+.exam-section .container > p a.btn { background: var(--primary); color: #FFFFFF; text-decoration: none; }
+.exam-section .container > p a.btn:hover { background: var(--secondary); transform: translateY(-3px); }
