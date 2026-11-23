@@ -342,4 +342,22 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/preparer-sa-radiographie/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/preparer-sa-radiographie/" />
   </url>
+  <url>
+    <loc>https://cimdrmerad.com/conseils/echo-doppler/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/conseils/echo-doppler/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/echo-doppler/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/echo-doppler/" />
+  </url>
+  <url>
+    <loc>https://cimdrmerad.com/ar/conseils/echo-doppler/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://cimdrmerad.com/conseils/echo-doppler/" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://cimdrmerad.com/ar/conseils/echo-doppler/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cimdrmerad.com/conseils/echo-doppler/" />
+  </url>
 </urlset>
